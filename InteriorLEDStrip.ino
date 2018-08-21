@@ -29,7 +29,7 @@ int delayval = 100; // delay for half a second
 
 const char* ssid = "121King5_GOOD";
 const char* password = "BronBronIn7";
-const char* mqttServer = "192.168.0.19";
+const char* mqttServer = "192.168.0.22";
 const int mqttPort = 1883;
 const char * clientName = "RoomNode1Interior";
 const char * topic = "11 SOUTH 14";
@@ -147,7 +147,7 @@ void colourRing(int timeLeft)
       
       // les than 5 mins remaining
      
-        pixels.setPixelColor(i, pixels.Color(0, 25, 0));
+        pixels.setPixelColor(i, pixels.Color(0, 255, 0));
       
       pixels.show(); // This sends the updated pixel color to the hardware.
 
@@ -163,7 +163,7 @@ void idleAnimation()
   Serial.println("idle");
   for (int i = 0; i < NUMPIXELS; i++)
   {
-          pixels.setPixelColor(i, pixels.Color(25,0, 0));   
+          pixels.setPixelColor(i, pixels.Color(255,0, 0));   
           delay(150);
           pixels.show();
   }
